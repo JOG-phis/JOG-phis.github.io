@@ -3,6 +3,7 @@ backend:
   repo: JOG-phis/JOG-phis.github.io
   branch: main
   auth_type: implicit
+  client_id: Ov23liKmcD0xVkoLBwuP
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
