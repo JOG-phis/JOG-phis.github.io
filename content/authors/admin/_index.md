@@ -1,16 +1,16 @@
 ---
 # Display name
-title: 吳健雄
+title: Juan
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: Juan Olmo García
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Juan
+last_name: Olmo García
 
 # Pronouns (optional)
-pronouns: she/her
+pronouns: He/him
 
 # Status emoji
 status:
@@ -20,21 +20,21 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Professor of Artificial Intelligence
+role: Teacher of Physics and Chemistry
 
 # Organizations/Affiliations to show in About widget
 organizations:
-  - name: Stanford University
-    url: https://www.stanford.edu/
+  - name: IES Valle del Almanzora
+    url: https://blogsaverroes.juntadeandalucia.es/iesvalledelalmanzora/
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.
+bio: Passionate Physics and Chemistry teacher dedicated to making complex scientific concepts accessible and engaging for students. I specialize in utilizing dynamic teaching methodologies and integrating digital simulations to visualize challenging topics and foster a deeper, intuitive understanding. My goal is to inspire the next generation of scientists and problem-solvers by bridging the gap between theory and practical application.
 
 # Social Networking
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 profiles:
   - icon: at-symbol
-    url: 'mailto:your-email@example.com'
+    url: 'jolmgar963@g.educaand.es'
     label: E-mail Me
   - icon: brands/x
     url: https://x.com/BuildLore
