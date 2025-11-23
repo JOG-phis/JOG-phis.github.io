@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Admin - Decap CMS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+  </head>
+  <body>
+    <h1 style="font-family: Arial, Helvetica, sans-serif; text-align:center;">Decap CMS</h1>
+
+    <!-- JS-YAML (para parsear config.yml) -->
+    <script src="https://unpkg.com/js-yaml@4.1.0/dist/js-yaml.min.js"></script>
+
+    <!-- Decap CMS bundle -->
+    <script src="https://unpkg.com/decap-cms@^2.0.0/dist/decap-cms.browser.js"></script>
+
+    <script>
+      // Use manual init so we can fetch the YAML config file from /admin/config.yml
+      window.CMS_MANUAL_INIT = true;
+
+      // Load config.yml, parse it and init Decap
+      fetch('/admin/config.yml')
+        .then(function(res){ if(!res.ok) throw new Error('No se pudo cargar /admin/config.yml'); return res.text(); })
+        .then(function(text){
+          try {
+            var cfg = jsyaml.load(text);
+            Decap.init({ config: cfg });
+          } catch(e) {
+            console.error('Error parseando config.yml:', e);
+            document.body.insertAdjacentHTML('beforeend', '<pre style="color:red;">Error parseando admin/config.yml. Mira la consola.</pre>');
+          }
+        })
+        .catch(function(err){
+          console.error(err);
+          document.body.insertAdjacentHTML('beforeend', '<pre style="color:red;">No se pudo cargar /admin/config.yml — revisa que exista.</pre>');
+        });
+    </script>
+  </body>
+</html>
