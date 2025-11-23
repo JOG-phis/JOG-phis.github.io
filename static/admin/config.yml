@@ -2,6 +2,7 @@ backend:
   name: github
   repo: JOG-phis/JOG-phis.github.io
   branch: main
+  auth_type: implicit
 
 media_folder: "static/uploads"
 public_folder: "/uploads"
